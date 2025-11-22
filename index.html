@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMEN Speech & Hearing Care | Empowering Communication</title>
+    <meta name="description" content="Complete Speech & Hearing Care in Hisar, Hansi, Bhiwani, Chandigarh, Mohali, Panchkula. RCI Registered Audiologist & Speech Therapist.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lumen-blue': '#3B82F6',
+                        'lumen-dark-blue': '#1E3A8A',
+                        'lumen-gray': '#F3F4F6',
+                        'lumen-yellow': '#FBBF24',
+                    },
+                    keyframes: {
+                        'gradient-move': {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    },
+                    animation: {
+                        'gradient-bg': 'gradient-move 10s ease infinite',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQ0J3o2w9XpS3oO6l9mB4f4G7E8eU42G181X5zKj4z0g8F+iQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom Styles for animated background and scroll fade-in (basic version) */
+        .animated-gradient-bg {
+            background: linear-gradient(-45deg, #3B82F6, #EFF6FF, #3B82F6);
+            background-size: 400% 400%;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-700 bg-white">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            
+            <a href="index.html" class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-lumen-yellow" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h-2V9h4v8z"/>
+                </path>
+                </svg>
+                <span class="text-xl font-bold text-lumen-dark-blue">LUMEN Speech & Hearing Care</span>
+            </a>
+
+            <nav class="hidden lg:flex space-x-6 text-lumen-dark-blue font-medium">
+                <a href="pages/about.html" class="hover:text-lumen-blue transition duration-300">About</a>
+                <a href="pages/services.html" class="hover:text-lumen-blue transition duration-300">Services</a>
+                <a href="pages/disorders.html" class="hover:text-lumen-blue transition duration-300">Disorders Library</a>
+                <a href="pages/blog.html" class="hover:text-lumen-blue transition duration-300">Blog</a>
+                <a href="pages/contact.html" class="hover:text-lumen-blue transition duration-300">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="text-right text-sm">
+                    <p class="font-semibold text-lumen-dark-blue">+91 9350158754</p>
+                    <p class="text-xs text-gray-500">lumenhearingcare@gmail.com</p>
+                </div>
+                <a href="pages/contact.html" class="px-4 py-2 bg-lumen-blue text-white rounded-full hover:bg-blue-600 transition duration-300 shadow-md">Book Appointment</a>
+            </div>
+
+            <button id="mobile-menu-button" class="lg:hidden text-lumen-dark-blue focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-lumen-gray border-t border-gray-200">
+            <nav class="flex flex-col space-y-2 p-4 text-lumen-dark-blue font-medium">
+                <a href="pages/about.html" class="py-2 hover:text-lumen-blue transition duration-300 border-b border-gray-300">About</a>
+                <a href="pages/services.html" class="py-2 hover:text-lumen-blue transition duration-300 border-b border-gray-300">Services</a>
+                <a href="pages/disorders.html" class="py-2 hover:text-lumen-blue transition duration-300 border-b border-gray-300">Disorders Library</a>
+                <a href="pages/blog.html" class="py-2 hover:text-lumen-blue transition duration-300 border-b border-gray-300">Blog</a>
+                <a href="pages/contact.html" class="py-2 hover:text-lumen-blue transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="animated-gradient-bg animate-gradient-bg py-20 md:py-32 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+                
+                <div class="w-full md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight">
+                        Empowering <span class="text-lumen-yellow">Communication</span>. Enhancing Lives.
+                    </h1>
+                    <p class="mt-4 text-xl text-white opacity-90">
+                        Complete Speech & Hearing Care for Children & Adults by an RCI Registered Specialist.
+                    </p>
+                    
+                    <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="pages/contact.html" class="px-8 py-4 bg-white text-lumen-blue font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-calendar-alt mr-2"></i> Book Appointment
+                        </a>
+                        <a href="https://wa.me/919350158754" target="_blank" class="px-8 py-4 bg-green-500 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl hover:bg-green-600 transition duration-300 transform hover:scale-105">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp Message
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-5/12 fade-in">
+                    <lottie-player
+                        src="https://lottie.host/e2b6134b-4892-4161-9f93-4a1d95011707/u6yYqG23Nn.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%;"
+                        loop
+                        autoplay
+                    ></lottie-player>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-lumen-gray">
+
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-lumen-blue font-semibold text-lg uppercase tracking-wider fade-in">Meet Your Clinician</p>
+                <h2 class="text-4xl font-extrabold text-lumen-dark-blue mt-2 mb-8 fade-in">Deepak: Your RCI Registered Specialist</h2>
+                <div class="max-w-4xl mx-auto text-xl text-gray-600 space-y-4 fade-in">
+                    <p>At LUMEN, we believe in a holistic, evidence-based approach to communication health. Deepak, an **RCI Registered Audiologist & Speech Therapist**, brings years of dedicated experience to provide the highest standard of care for all ages.</p>
+                    <p class="font-semibold">Our commitment is to provide **clinical, trustworthy, and child-friendly care** in a warm environment.</p>
+                </div>
+                <a href="pages/about.html" class="mt-8 inline-block px-6 py-3 border-2 border-lumen-blue text-lumen-blue font-semibold rounded-full hover:bg-lumen-blue hover:text-white transition duration-300 fade-in">
+                    Learn More About Deepak & Our Mission
+                </a>
+            </div>
+        </section>
+
+        <hr class="border-t border-lumen-gray">
+
+        <section class="py-16 md:py-24 bg-lumen-gray">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-lumen-blue font-semibold text-center uppercase tracking-wider mb-2 fade-in">Our Expert Care</p>
+                <h2 class="text-4xl font-extrabold text-lumen-dark-blue text-center mb-12 fade-in">Specialized Services We Offer</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group fade-in">
+                        <div class="w-12 h-12 bg-lumen-blue rounded-full flex items-center justify-center mb-4 transition-all group-hover:bg-lumen-yellow">
+                            <i class="fas fa-comments text-white text-xl group-hover:text-lumen-dark-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-lumen-dark-blue mb-2">Speech Therapy</h3>
+                        <p class="text-gray-600 text-sm">Targeting stuttering, delayed speech, misarticulation, Aphasia, and other communication challenges across all ages.</p>
+                        <a href="pages/services.html#speech" class="mt-3 inline-block text-lumen-blue font-semibold text-sm hover:underline">View Details <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group fade-in">
+                        <div class="w-12 h-12 bg-lumen-blue rounded-full flex items-center justify-center mb-4 transition-all group-hover:bg-lumen-yellow">
+                            <i class="fas fa-headphones-alt text-white text-xl group-hover:text-lumen-dark-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-lumen-dark-blue mb-2">Diagnostic Audiometry</h3>
+                        <p class="text-gray-600 text-sm">Comprehensive tests: PTA, OAE, BERA, and Tympanometry for accurate hearing loss diagnosis.</p>
+                        <a href="pages/services.html#audiometry" class="mt-3 inline-block text-lumen-blue font-semibold text-sm hover:underline">View Details <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group fade-in">
+                        <div class="w-12 h-12 bg-lumen-blue rounded-full flex items-center justify-center mb-4 transition-all group-hover:bg-lumen-yellow">
+                            <i class="fas fa-assistive-listening-systems text-white text-xl group-hover:text-lumen-dark-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-lumen-dark-blue mb-2">Hearing Aid Fitting</h3>
+                        <p class="text-gray-600 text-sm">Personalized selection, fitting, and adjustment of the latest digital hearing aids.</p>
+                        <a href="pages/services.html#hearing-aids" class="mt-3 inline-block text-lumen-blue font-semibold text-sm hover:underline">View Details <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group fade-in">
+                        <div class="w-12 h-12 bg-lumen-blue rounded-full flex items-center justify-center mb-4 transition-all group-hover:bg-lumen-yellow">
+                            <i class="fas fa-child text-white text-xl group-hover:text-lumen-dark-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-lumen-dark-blue mb-2">Child Development</h3>
+                        <p class="text-gray-600 text-sm">Specialized support for Autism, Developmental Delay, CAPD, and other pediatric disorders.</p>
+                        <a href="pages/services.html#pediatric" class="mt-3 inline-block text-lumen-blue font-semibold text-sm hover:underline">View Details <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-lumen-gray">
+
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-lumen-blue font-semibold text-center uppercase tracking-wider mb-2 fade-in">Voices of Our Patients</p>
+                <h2 class="text-4xl font-extrabold text-lumen-dark-blue text-center mb-12 fade-in">What Our Families Say</h2>
+                
+                <div class="max-w-3xl mx-auto bg-lumen-gray p-8 rounded-xl shadow-lg text-center fade-in">
+                    <p class="text-3xl text-lumen-yellow mb-4"><i class="fas fa-quote-left"></i></p>
+                    <blockquote class="italic text-lg text-gray-700">
+                        "Deepak sir's dedication to my child's delayed speech was phenomenal. We saw real progress within a few months. The environment is so warm yet completely professional."
+                    </blockquote>
+                    <p class="mt-4 font-semibold text-lumen-dark-blue">- Sunita K. (Parent, Chandigarh Clinic)</p>
+                </div>
+                
+                <div class="flex justify-center space-x-2 mt-6 fade-in">
+                    <span class="w-3 h-3 bg-lumen-blue rounded-full"></span>
+                    <span class="w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-lumen-blue transition"></span>
+                    <span class="w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-lumen-blue transition"></span>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-lumen-gray">
+
+        <section class="py-16 md:py-24 bg-lumen-blue text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-white text-center mb-12 fade-in">Find a LUMEN Clinic Near You</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    
+                    <div class="bg-white text-gray-800 p-5 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in">
+                        <p class="font-bold text-xl mb-1 text-lumen-dark-blue">Chandigarh</p>
+                        <p class="text-sm">Sector 34</p>
+                    </div>
+
+                    <div class="bg-white text-gray-800 p-5 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in">
+                        <p class="font-bold text-xl mb-1 text-lumen-dark-blue">Mohali</p>
+                        <p class="text-sm">Phase 7</p>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 p-5 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in">
+                        <p class="font-bold text-xl mb-1 text-lumen-dark-blue">Panchkula</p>
+                        <p class="text-sm">Sector 11</p>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 p-5 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in">
+                        <p class="font-bold text-xl mb-1 text-lumen-dark-blue">Hisar</p>
+                        <p class="text-sm">Main Market</p>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 p-5 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in">
+                        <p class="font-bold text-xl mb-1 text-lumen-dark-blue">Hansi</p>
+                        <p class="text-sm">City Center</p>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 p-5 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in">
+                        <p class="font-bold text-xl mb-1 text-lumen-dark-blue">Bhiwani</p>
+                        <p class="text-sm">Near Bus Stand</p>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 p-5 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in">
+                        <p class="font-bold text-xl mb-1 text-lumen-dark-blue">Delhi</p>
+                        <p class="text-sm">Lajpat Nagar (Future expansion)</p>
+                    </div>
+
+                    <a href="pages/contact.html" class="flex items-center justify-center p-5 rounded-lg border-2 border-white text-white hover:bg-white hover:text-lumen-blue transition duration-300 fade-in">
+                        <span class="font-semibold text-center">View All Maps & Details <i class="fas fa-map-marked-alt ml-2"></i></span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-lumen-dark-blue text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 pb-8">
+                
+                <div class="col-span-2 md:col-span-2 space-y-3">
+                    <div class="flex items-center space-x-2">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lumen-yellow" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h-2V9h4v8z"/></svg>
+                        <span class="text-xl font-bold">LUMEN Care</span>
+                    </div>
+                    <p class="text-sm text-gray-300">Empowering communication and enhancing lives through expert speech and hearing care.</p>
+                    <p class="text-sm"><i class="fas fa-phone mr-2 text-lumen-yellow"></i> +91 9350158754</p>
+                    <p class="text-sm"><i class="fas fa-envelope mr-2 text-lumen-yellow"></i> lumenhearingcare@gmail.com</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-lumen-yellow">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="pages/about.html" class="hover:text-lumen-blue transition duration-300">About Deepak</a></li>
+                        <li><a href="pages/services.html" class="hover:text-lumen-blue transition duration-300">Our Services</a></li>
+                        <li><a href="pages/disorders.html" class="hover:text-lumen-blue transition duration-300">Disorders Library</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-lumen-yellow">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="pages/blog.html" class="hover:text-lumen-blue transition duration-300">Blog & Tips</a></li>
+                        <li><a href="pages/contact.html" class="hover:text-lumen-blue transition duration-300">Book Appointment</a></li>
+                        <li><a href="#" class="hover:text-lumen-blue transition duration duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-lumen-yellow">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/lumenhearingcare" target="_blank" class="text-2xl hover:text-pink-500 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/919350158754" target="_blank" class="text-2xl hover:text-green-500 transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="current-year"></span> LUMEN Speech & Hearing Care. All rights reserved. RCI Reg. Specialist.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Soft Scroll Fade-in Animation (Intersection Observer)
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px -100px 0px" // Starts animation 100px before reaching viewport bottom
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // **Add Carousel JS logic here for Testimonials section (not included for brevity)**
+        // **Add Smooth Page Transition logic here if not using a library (not included for brevity)**
+
+    </script>
+</body>
+</html>
